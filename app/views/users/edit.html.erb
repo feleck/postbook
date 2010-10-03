@@ -1,6 +1,4 @@
-<h1>Sign up</h1>
-<p>This is where you can sign up. Just for now. <br />
-Later on - it would be add new user page - just for admin. </p>
+<h1>Edit userp</h1>
 
 <%= form_for(@user) do |f| %>
 	<%= render 'shared/error_messages', :object => f.object %>
@@ -22,7 +20,12 @@ Later on - it would be add new user page - just for admin. </p>
 		
 	</div>
 	<div class="actions">
-		<%= f.submit "Sign up" %>
+		<%= f.submit "Update" %>
 	</div>
 
 <% end %>
+
+<div>
+	<%= gravatar_for @user %>
+	<a href="http://gravatar.com/emails">change</a>
+</div>

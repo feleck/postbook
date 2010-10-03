@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
     else
 #      flash.now[:success] = "Successfuly signed in."
       sign_in user
-      redirect_to user
+      redirect_back_or user
 #      flash.now[:success] = "Successfuly signed in."
       # signin the user and redirects to his show page
     end
